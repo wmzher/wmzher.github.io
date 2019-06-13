@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="我2017年在易唐实习6个月的笔记，主要是网页链接，里面包括了大量相关技术和知识，只有先Ctrl+C再Ctrl+V到浏览器按回车解开封印~
+http://css.cuishifeng.cn/index.htmlhttps://www.w3cplus.com/css3/ten-effects-with-css3-filter  //滤镜
+http://jquery.cuishifeng.cn/ind">
+<meta property="og:type" content="article">
+<meta property="og:title" content="易唐前端实习的笔记">
+<meta property="og:url" content="wmzher.github.io/2019/06/13/entor/index.html">
+<meta property="og:site_name" content="wmzher">
+<meta property="og:description" content="我2017年在易唐实习6个月的笔记，主要是网页链接，里面包括了大量相关技术和知识，只有先Ctrl+C再Ctrl+V到浏览器按回车解开封印~
+http://css.cuishifeng.cn/index.htmlhttps://www.w3cplus.com/css3/ten-effects-with-css3-filter  //滤镜
+http://jquery.cuishifeng.cn/ind">
+<meta property="og:updated_time" content="2019-06-13T07:10:32.064Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="易唐前端实习的笔记">
+<meta name="twitter:description" content="我2017年在易唐实习6个月的笔记，主要是网页链接，里面包括了大量相关技术和知识，只有先Ctrl+C再Ctrl+V到浏览器按回车解开封印~
+http://css.cuishifeng.cn/index.htmlhttps://www.w3cplus.com/css3/ten-effects-with-css3-filter  //滤镜
+http://jquery.cuishifeng.cn/ind">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="wmzher.github.io/2019/06/13/entor/"/>
+
+
+
+
+
+  <title>易唐前端实习的笔记 | wmzher</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">wmzher</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">王明哲的博客</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="wmzher.github.io/2019/06/13/entor/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wmzher">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="wmzher">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">易唐前端实习的笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-13T15:09:55+08:00">
+                2019-06-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>我2017年在易唐实习6个月的笔记，主要是网页链接，里面包括了大量相关技术和知识，只有先Ctrl+C再Ctrl+V到浏览器按回车解开封印~</p>
+<p><a href="http://css.cuishifeng.cn/index.html" target="_blank" rel="external">http://css.cuishifeng.cn/index.html</a><br><a href="https://www.w3cplus.com/css3/ten-effects-with-css3-filter" target="_blank" rel="external">https://www.w3cplus.com/css3/ten-effects-with-css3-filter</a>  //滤镜</p>
+<p><a href="http://jquery.cuishifeng.cn/index.html" target="_blank" rel="external">http://jquery.cuishifeng.cn/index.html</a></p>
+<p><a href="http://cnodejs.org/api" target="_blank" rel="external">http://cnodejs.org/api</a></p>
+<p><a href="http://es6.ruanyifeng.com" target="_blank" rel="external">http://es6.ruanyifeng.com</a></p>
+<p><a href="http://vue.ydui.org/" target="_blank" rel="external">http://vue.ydui.org/</a></p>
+<p><a href="https://vux.li/#/" target="_blank" rel="external">https://vux.li/#/</a></p>
+<p><a href="https://fe-driver.github.io/vue-beauty/#/components/start" target="_blank" rel="external">https://fe-driver.github.io/vue-beauty/#/components/start</a></p>
+<p>好用的UI组件：</p>
+<p><a href="http://element.eleme.io/" target="_blank" rel="external">http://element.eleme.io/</a><br><a href="http://www.muse-ui.org/#/index" target="_blank" rel="external">http://www.muse-ui.org/#/index</a><br><a href="https://wangdahoo.github.io/vonic-documents/#/" target="_blank" rel="external">https://wangdahoo.github.io/vonic-documents/#/</a><br><a href="https://www.youzanyun.com/zanui/vant#/zh-CN/component/intro" target="_blank" rel="external">https://www.youzanyun.com/zanui/vant#/zh-CN/component/intro</a><br><a href="http://mint-ui.github.io/" target="_blank" rel="external">http://mint-ui.github.io/</a><br><a href="https://vux.li/#/" target="_blank" rel="external">https://vux.li/#/</a></p>
+<p>安装node.js<br>node -v<br>npm -v<br>cd vue npm install -g vue-cli<br>vue init webpack xxx(项目名称)<br> // project name  项目名称  -&gt;随便来<br> // project  description  项目介绍 -&gt;你开心就好<br> // author   项目作者 -》  你叫什么名字<br> // RUNTIME + COMPILER   or   RUNTIME  ONLY   选第一个  就是直接 enter 回车<br> //vue-router  是否需要路由    回复  Y + enter(回车)<br>  //estlint 全部选择 n<br>  // tesst  全部选择 n<br>/*</p>
+<ul>
+<li>cd 你的新初始化的目录</li>
+<li>npm install   运行 npm install</li>
+<li>npm run dev   以dev环境运行项目   </li>
+<li></li>
+<li>localhost:8080    在浏览器打开  localhost:8080(127.0.0.1:8080）</li>
+</ul>
+<p>引入axios<br>npm install axios –save</p>
+<p>npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="external">https://registry.npm.taobao.org</a> //中国镜像<br>npm uninstall cnpm -g  //卸载cnpm<br>翻墙<br><a href="https://www.speeds.vip/link/pqtxcYKQveSHj7aV?mu=0" target="_blank" rel="external">https://www.speeds.vip/link/pqtxcYKQveSHj7aV?mu=0</a></p>
+<p><a href="https://www.w3cplus.com/javascript/how-to-find-the-sum-of-an-array-of-numbers.html" target="_blank" rel="external">https://www.w3cplus.com/javascript/how-to-find-the-sum-of-an-array-of-numbers.html</a></p>
+<p><a href="http://www.w3school.com.cn/jsref/jsref_obj_date.asp" target="_blank" rel="external">http://www.w3school.com.cn/jsref/jsref_obj_date.asp</a></p>
+<p>cnpm install koa –save//安装koa</p>
+<p>新建index.js 复制代码  运行node index.js</p>
+<p>npm install koa-route //建路由</p>
+<p>cnpm install koahubjs/koahub-cli -g//安装koahub</p>
+<p><a href="https://git-scm.com/downloads" target="_blank" rel="external">https://git-scm.com/downloads</a> // 下载Git</p>
+<p>koahub create mykoa(自命名) //建一个文件</p>
+<p>cd mykoa npm install //</p>
+<p>npm  start//运行服务器   npm install –save mysql2 //链接数据库  npm install utility –save//加密  npm i koa-orm –save</p>
+<p><a href="https://github.com/koahubjs/koahub-cli//笔记链接" target="_blank" rel="external">https://github.com/koahubjs/koahub-cli//笔记链接</a></p>
+<p><a href="http://apizza.cc//模拟项目" target="_blank" rel="external">http://apizza.cc//模拟项目</a></p>
+<p><a href="https://github.com/koahubjs/koahub//koahub.js教程" target="_blank" rel="external">https://github.com/koahubjs/koahub//koahub.js教程</a></p>
+<p><a href="https://github.com/koahubjs/koahub/blob/master/docs/README.md" target="_blank" rel="external">https://github.com/koahubjs/koahub/blob/master/docs/README.md</a>  //koahub.js教程</p>
+<p> name: ‘ xxxx’ ,// 链接名称（自定义）<br>     modelPath:join(_dirname,’md’) , //model文件<br>     db:’wobugaosuni’ , //数据库表名称<br>     username:’root’, //数据库用户名<br>     password:’root’,//数据库密码<br>     dialect:’mysql’,//数据库类型<br>     host:’127.0.0.1 ‘,//数据库服务器地址<br>     port:3306,<br>     pool:{<br>         maxConnections:10,  //最大链接设置<br>         minConnections:0 ,   //最小链接设置<br>         maxIdleTime:30000  //请求超时时间 单位毫秒<br>     }</p>
+<p><a href="http://www.jb51.net/article/88781.htm" target="_blank" rel="external">http://www.jb51.net/article/88781.htm</a><br>1、只要“&amp;&amp;”前面是false，无论“&amp;&amp;”后面是true还是false，结果都将返“&amp;&amp;”前面的值;<br>2、只要“&amp;&amp;”前面是true，无论“&amp;&amp;”后面是true还是false，结果都将返“&amp;&amp;”后面的值;<br>1、只要“||”前面为false,不管“||”后面是true还是false，都返回“||”后面的值。<br>2、只要“||”前面为true,不管“||”后面是true还是false，都返回“||”前面的值。</p>
+<p><a href="http://www.runoob.com/jsref/jsref-obj-array.html" target="_blank" rel="external">http://www.runoob.com/jsref/jsref-obj-array.html</a>   //JS数组对象方法<br><a href="https://www.w3cplus.com/javascript/how-to-find-the-sum-of-an-array-of-numbers.html" target="_blank" rel="external">https://www.w3cplus.com/javascript/how-to-find-the-sum-of-an-array-of-numbers.html</a>  JavaScript学习笔记：数组求和方法</p>
+<p><a href="https://www.cnblogs.com/big-orange/p/6524197.html" target="_blank" rel="external">https://www.cnblogs.com/big-orange/p/6524197.html</a>  FIND、FINDINDEX、INDEXOF、LASTINDEX、INCLUDES 数组五种查询条件方法介绍</p>
+<p><a href="https://segmentfault.com/a/1190000005046496" target="_blank" rel="external">https://segmentfault.com/a/1190000005046496</a>  ES6数组方法</p>
+<p><a href="https://itbilu.com/nodejs/npm/N1sdaHTzb.html" target="_blank" rel="external">https://itbilu.com/nodejs/npm/N1sdaHTzb.html</a>  //Sequelize 中文API文档</p>
+<p>//12.18</p>
+<p><a href="https://github.com/iview/iview-admin//进入该网址点击clone" target="_blank" rel="external">https://github.com/iview/iview-admin//进入该网址点击clone</a> and download解压这些文件至新建文件夹admin，cmd命令 CD 进入该文件 cnpm install 然后cnpm run dev</p>
+<p><a href="https://jingyan.baidu.com/article/6dad5075d1dc40a123e36ea3.html" target="_blank" rel="external">https://jingyan.baidu.com/article/6dad5075d1dc40a123e36ea3.html</a> // 安装java JDK</p>
+<p><a href="http://cordova.apache.org/" target="_blank" rel="external">http://cordova.apache.org/</a>  //安装cordova<br>npm install -g cordova<br>新建文件目录<br>cordova create MyApp（自定义名字）<br>cd MyApp<br>cordova platform add android<br>cordova run android</p>
+<p>cordova create xxx 创建一个xxx的cordova项目<br>cordova platform add android   添加一个安卓app项目设备给当前项目<br>cordova build android   构建安卓app<br>cordova run android     运行测试项目</p>
+<p>1.建立cordova项目</p>
+<p>2.修改vue项目当中的 config/index.js 里面的  </p>
+<p>  build: {<br>    // Template for index.html<br>    index: path.resolve(__dirname, ‘D:/app/mobi/www/index.html’),  //路径更改成 cordova项目下 www文件夹所在的目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// Paths</div><div class="line">assetsRoot: path.resolve(__dirname, &apos;D:/app/mobi/www&apos;),//路径更改成 cordova项目下 www文件夹所在的目录</div><div class="line">assetsSubDirectory: &apos;static&apos;,</div><div class="line">assetsPublicPath: &apos;./&apos;,  // 因为在cordova 里面目录会嵌套多一层 所以加一个相对路径</div></pre></td></tr></table></figure>
+<p>3.在vue项目当中 运行 npm run build  ,这一步会把vue的项目打包到cordova项目中的www目录</p>
+<ol>
+<li>（如果做了 可以忽略）在cordova 项目当中 cordova platform add android<br>5.执行  cordova build android<br>6.执行 cordova run android </li>
+</ol>
+<p><a href="https://www.cnblogs.com/wujindong/p/5647101.html" target="_blank" rel="external">https://www.cnblogs.com/wujindong/p/5647101.html</a>  //打包<br><a href="https://github.com/zjw1918/cordova-plugin-baidugeolocation" target="_blank" rel="external">https://github.com/zjw1918/cordova-plugin-baidugeolocation</a> //安装百度SDK</p>
+<p>cmd命令进入myapp项目<br>cordova build android –release</p>
+<p>keytool -genkey -v -keystore release-key.keystore -alias cordova-demo -keyalg RSA -keysize 2048 -validity 10000    设置密码123456和输入信息生成release-key.keystore  cordova-demo（是别名）</p>
+<p>keytool -list -v -keystore release-key.keystore //获取SHA1  百度或高德开发平台控制台创建项目复制SHA1代码 在AndroidManifest.xml获取package（包名）</p>
+<p>在myapp项目根目录里新建build.json 复制代码<br>{<br>  “android”: {<br>    “release”: {<br>      “keystore”: “release-key.keystore”,<br>      “alias”: “cordova-demo”,<br>      “storePassword”: “123456”,<br>      “password”: “123456”<br>    }<br>  }<br>}</p>
+<p>jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore release-key.keystore platforms\android\build\outputs\apk\android-release-unsigned.apk cordova-demo(别名)//（apk路径）签名</p>
+<p>cordova plugin add cordova-plugin-baidugeolocation –variable ANDROID_KEY=eDSogagWFRL8Svb<em>*</em>Y4VDH8eMSPb8(YOUR KEY API) //安装百度SDK</p>
+<p>zipalign -v 4 platforms\android\build\outputs\apk\android-release-unsigned.apk android-apk\cordova-demo.apk  //正式将release版本apk打包</p>
+<p><a href="http://cordova.apache.org/docs/en/latest/" target="_blank" rel="external">http://cordova.apache.org/docs/en/latest/</a>  //cordova官方插件</p>
+<p><a href="http://cordova.axuer.com/docs/zh-cn/latest/" target="_blank" rel="external">http://cordova.axuer.com/docs/zh-cn/latest/</a>    //cordova中文文档官方插件</p>
+<p><a href="https://github.com/" target="_blank" rel="external">https://github.com/</a>   //github开源插件</p>
+<p><a href="https://github.com/node-modules/utility" target="_blank" rel="external">https://github.com/node-modules/utility</a>   //服务端加密</p>
+<p><a href="https://www.jianshu.com/p/81fdd0a1e7d4" target="_blank" rel="external">https://www.jianshu.com/p/81fdd0a1e7d4</a>  //正则表达式<br><a href="http://deerchao.net/tutorials/regex/regex.htm" target="_blank" rel="external">http://deerchao.net/tutorials/regex/regex.htm</a>   30分钟入门<br><a href="http://tools.jb51.net/regex/create_reg" target="_blank" rel="external">http://tools.jb51.net/regex/create_reg</a> //在线生成工具<br><a href="http://www.jb51.net/article/77687.htm" target="_blank" rel="external">http://www.jb51.net/article/77687.htm</a>  //65条最常用正则表达式</p>
+<p><a href="http://blog.csdn.net/h5_queenstyle12/article/details/75386359" target="_blank" rel="external">http://blog.csdn.net/h5_queenstyle12/article/details/75386359</a>  //vuex<br><a href="https://vuex.vuejs.org/zh-cn/actions.html" target="_blank" rel="external">https://vuex.vuejs.org/zh-cn/actions.html</a>  //官网</p>
+<p><a href="https://segmentfault.com/ls/1650000011074057#firstItem" target="_blank" rel="external">https://segmentfault.com/ls/1650000011074057#firstItem</a>  //vue视频</p>
+<p><a href="https://socket.io/" target="_blank" rel="external">https://socket.io/</a><br><a href="https://github.com/MetinSeylan/Vue-Socket.io" target="_blank" rel="external">https://github.com/MetinSeylan/Vue-Socket.io</a>  //安装socket(客户端)  npm i vue-socket.io –save</p>
+<p><a href="https://github.com/ambelovsky/koa-socket-2" target="_blank" rel="external">https://github.com/ambelovsky/koa-socket-2</a>  新建一个目录koasocket(服务端) npm i koa –save   npm i -S koa-socket-2  启动: node index</p>
+<p><a href="https://segmentfault.com/a/1190000010952001" target="_blank" rel="external">https://segmentfault.com/a/1190000010952001</a>   //AJAX 和 Socket.IO到底选哪个?</p>
+<p><a href="http://nodejs.cn/api" target="_blank" rel="external">http://nodejs.cn/api</a></p>
+<p><a href="http://eggjs.org/zh-cn/intro/quickstart.html" target="_blank" rel="external">http://eggjs.org/zh-cn/intro/quickstart.html</a></p>
+<p><a href="https://juejin.im/" target="_blank" rel="external">https://juejin.im/</a></p>
+<p><a href="https://www.jianshu.com/" target="_blank" rel="external">https://www.jianshu.com/</a>  //vue资源</p>
+<p><a href="https://juejin.im/post/58c9d5fb1b69e6006b686bce" target="_blank" rel="external">https://juejin.im/post/58c9d5fb1b69e6006b686bce</a>  //（冒泡排序）JS中可能用得到的全部的排序算法</p>
+<p><a href="https://angular.io/" target="_blank" rel="external">https://angular.io/</a><br>安装angular<br>npm install -g @angular/cli<br>创建新项目<br>ng new my-app<br>启动开发服务器<br>cd my-app<br>ng serve –open</p>
+<p><a href="https://www.jianshu.com/p/9af9f203e0b1" target="_blank" rel="external">https://www.jianshu.com/p/9af9f203e0b1</a> //简书ng教程</p>
+<p><a href="https://electronjs.org/" target="_blank" rel="external">https://electronjs.org/</a>    //构建桌面应用</p>
+<p><a href="https://www.gitbook.com/book/xcatliu/typescript-tutorial/details" target="_blank" rel="external">https://www.gitbook.com/book/xcatliu/typescript-tutorial/details</a> //typescript 教程</p>
+<p><a href="https://shimo.im/docs/H9f9H9mbeAc2jVkE/" target="_blank" rel="external">https://shimo.im/docs/H9f9H9mbeAc2jVkE/</a> 「我的angular的文档集」</p>
+<p><a href="https://cipchk.github.io/ngx-weui/#/docs/components/actionsheet" target="_blank" rel="external">https://cipchk.github.io/ngx-weui/#/docs/components/actionsheet</a>  // wxui<br><a href="https://github.com/cipchk/ngx-weui" target="_blank" rel="external">https://github.com/cipchk/ngx-weui</a>         引入css： <link href="https://cipchk.github.io/ngx-weui/assets/weui.css" rel="stylesheet"></p>
+<p><a href="https://ionicframework.com/getting-started/" target="_blank" rel="external">https://ionicframework.com/getting-started/</a>   //ionic</p>
+<p><a href="http://weex.apache.org/cn/guide/" target="_blank" rel="external">http://weex.apache.org/cn/guide/</a>    //weex</p>
+<p><a href="http://blog.csdn.net/h5_queenstyle12/article/details/75386359" target="_blank" rel="external">http://blog.csdn.net/h5_queenstyle12/article/details/75386359</a>   (sth error)  //vuex<br><a href="http://blog.csdn.net/embrace924/article/details/78272822" target="_blank" rel="external">http://blog.csdn.net/embrace924/article/details/78272822</a>  //vuex</p>
+<p><a href="https://filezilla-project.org/" target="_blank" rel="external">https://filezilla-project.org/</a>   // fz下载</p>
+<p><a href="http://www.souho.net/forum.php" target="_blank" rel="external">http://www.souho.net/forum.php</a>   //搜虎源码下载</p>
+<p><a href="https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000" target="_blank" rel="external">https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000</a>  js全栈</p>
+<p>qiniu<br><a href="https://www.jianshu.com/p/9681467d58e7" target="_blank" rel="external">https://www.jianshu.com/p/9681467d58e7</a>   jQuery</p>
+<p><a href="https://github.com/soldair/node-qrcode" target="_blank" rel="external">https://github.com/soldair/node-qrcode</a> //二维码插件   npm install –save qrcode</p>
+<p>doc.webpack-china.org   // webpack打包</p>
+<p><a href="https://github.com/bda-research/node-crawler" target="_blank" rel="external">https://github.com/bda-research/node-crawler</a>   // 爬虫</p>
+<p><a href="https://github.com/node-schedule/node-schedule" target="_blank" rel="external">https://github.com/node-schedule/node-schedule</a>  // 轮寻</p>
+<p><a href="https://segmentfault.com/q/1010000009407919/a-1020000009408083" target="_blank" rel="external">https://segmentfault.com/q/1010000009407919/a-1020000009408083</a> axios上传文件</p>
+<p><a href="https://www.jianshu.com/p/e87dd6aa47d3" target="_blank" rel="external">https://www.jianshu.com/p/e87dd6aa47d3</a>  //jsonp</p>
+<p><a href="https://github.com/apache/cordova-plugin-file-transfer#backwards-compatibility-notes" target="_blank" rel="external">https://github.com/apache/cordova-plugin-file-transfer#backwards-compatibility-notes</a>  //文件上传</p>
+<p><a href="http://www.jb51.net/article/76695.htm" target="_blank" rel="external">http://www.jb51.net/article/76695.htm</a><br><a href="https://segmentfault.com/q/1010000008906623/a-1020000008909097" target="_blank" rel="external">https://segmentfault.com/q/1010000008906623/a-1020000008909097</a>  //electron全屏</p>
+<p><a href="http://blog.csdn.net/hsd2012/article/details/51279472" target="_blank" rel="external">http://blog.csdn.net/hsd2012/article/details/51279472</a>  //mongoDB入门教程</p>
+<p>启晴村赏晴楼<br><a href="https://blog.csdn.net/qq_35154427/article/details/88536188" target="_blank" rel="external">https://blog.csdn.net/qq_35154427/article/details/88536188</a>  //以上内容放在csdn</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/05/siqi/" rel="next" title="在青岛思齐软件记录的笔记">
+                <i class="fa fa-chevron-left"></i> 在青岛思齐软件记录的笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">wmzher</p>
+              <p class="site-description motion-element" itemprop="description">全栈开发</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">Artikel</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">wmzher</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

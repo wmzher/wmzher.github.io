@@ -231,7 +231,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="wmzher.github.io/2019/06/13/易唐前端实习/">
+    <link itemprop="mainEntityOfPage" href="wmzher.github.io/2019/06/13/entor/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wmzher">
@@ -250,7 +250,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/06/13/易唐前端实习/" itemprop="url">Unbenannt</a></h1>
+                <a class="post-title-link" href="/2019/06/13/entor/" itemprop="url">易唐前端实习的笔记</a></h1>
         
 
         <div class="post-meta">
@@ -262,7 +262,7 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-13T14:56:55+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-13T15:09:55+08:00">
                 2019-06-13
               </time>
             
@@ -302,7 +302,7 @@
       
         
           
-            <p>我在易唐实习6个月的笔记，主要是网页链接，里面包括了大量相关技术和知识，只有先Ctrl+C再Ctrl+V到浏览器按回车解开封印~</p>
+            <p>我2017年在易唐实习6个月的笔记，主要是网页链接，里面包括了大量相关技术和知识，只有先Ctrl+C再Ctrl+V到浏览器按回车解开封印~</p>
 <p><a href="http://css.cuishifeng.cn/index.html" target="_blank" rel="external">http://css.cuishifeng.cn/index.html</a><br><a href="https://www.w3cplus.com/css3/ten-effects-with-css3-filter" target="_blank" rel="external">https://www.w3cplus.com/css3/ten-effects-with-css3-filter</a>  //滤镜</p>
 <p><a href="http://jquery.cuishifeng.cn/index.html" target="_blank" rel="external">http://jquery.cuishifeng.cn/index.html</a></p>
 <p><a href="http://cnodejs.org/api" target="_blank" rel="external">http://cnodejs.org/api</a></p>
@@ -350,11 +350,8 @@
 <p>1.建立cordova项目</p>
 <p>2.修改vue项目当中的 config/index.js 里面的  </p>
 <p>  build: {<br>    // Template for index.html<br>    index: path.resolve(__dirname, ‘D:/app/mobi/www/index.html’),  //路径更改成 cordova项目下 www文件夹所在的目录</p>
-<pre><code>// Paths
-assetsRoot: path.resolve(__dirname, &apos;D:/app/mobi/www&apos;),//路径更改成 cordova项目下 www文件夹所在的目录
-assetsSubDirectory: &apos;static&apos;,
-assetsPublicPath: &apos;./&apos;,  // 因为在cordova 里面目录会嵌套多一层 所以加一个相对路径
-</code></pre><p>3.在vue项目当中 运行 npm run build  ,这一步会把vue的项目打包到cordova项目中的www目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// Paths</div><div class="line">assetsRoot: path.resolve(__dirname, &apos;D:/app/mobi/www&apos;),//路径更改成 cordova项目下 www文件夹所在的目录</div><div class="line">assetsSubDirectory: &apos;static&apos;,</div><div class="line">assetsPublicPath: &apos;./&apos;,  // 因为在cordova 里面目录会嵌套多一层 所以加一个相对路径</div></pre></td></tr></table></figure>
+<p>3.在vue项目当中 运行 npm run build  ,这一步会把vue的项目打包到cordova项目中的www目录</p>
 <ol>
 <li>（如果做了 可以忽略）在cordova 项目当中 cordova platform add android<br>5.执行  cordova build android<br>6.执行 cordova run android </li>
 </ol>
