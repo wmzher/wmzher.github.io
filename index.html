@@ -184,7 +184,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Accueil
           </a>
         </li>
       
@@ -194,7 +194,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -260,7 +260,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posté le</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-05T10:41:25+08:00">
                 2019-06-05
@@ -317,12 +317,15 @@
 <p>node框架里有操作mongodb数据库的插件mongoose，安装后可以根据文档进行CURD（增删查改）的操作</p>
 <p><a href="https://www.jianshu.com/p/2f54b90efe15" target="_blank" rel="external">https://www.jianshu.com/p/2f54b90efe15</a>   //mongoose命令</p>
 <p><a href="http://blog.csdn.net/qq_36453032/article/details/72875563//连表查询" target="_blank" rel="external">http://blog.csdn.net/qq_36453032/article/details/72875563//连表查询</a></p>
+<p><strong>导出数据表</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd qq.csv所在位置</div><div class="line">iconv -f gbk -t UTF-8 qq.csv  &gt; qq1.csv</div><div class="line">mongoimport -d sbuy -c commoditys --type csv --headerline --file qq1.csv</div></pre></td></tr></table></figure>
+<p>//nodejs将Excel中的数据导入MongoDB<br><a href="https://alfierichou.github.io/2017/12/13/nodejs%E5%B0%86Excel%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5MongoDB/" target="_blank" rel="external">https://alfierichou.github.io/2017/12/13/nodejs%E5%B0%86Excel%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5MongoDB/</a><br>mongoexport -h 47.254.42.191 -p 27017 -d sbuy -c admins–type=csv -f “aname,telephone,idcard” –out F:\aaa.csv</p>
 <h1 id="2-express"><a href="#2-express" class="headerlink" title="2.express"></a>2.express</h1><p>express框架是比较成熟多人用的node框架，学习这个框架主要是启动文件配置，路由，控制器，ORM框架（操作数据库的中间件如mongodb的mongoose，mysql的Sequelize），其他的node框架也类似分为这些知识。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">//允许跨域 app.js</div><div class="line">app.all(&apos;*&apos;,function (req, res, next) &#123;</div><div class="line">    res.header(&apos;Access-Control-Allow-Origin&apos;, &apos;*&apos;);</div><div class="line">    res.header(&apos;Access-Control-Allow-Headers&apos;, &apos;Content-Type,Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild&apos;);</div><div class="line">    res.header(&apos;Access-Control-Allow-Methods&apos;, &apos;PUT, POST, GET, DELETE,OPTIONS&apos;);</div><div class="line">    if (req.method == &apos;OPTIONS&apos;) &#123;</div><div class="line">        res.send(200);</div><div class="line">    &#125;</div><div class="line">    else &#123;</div><div class="line">        next();</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <h1 id="3-electron"><a href="#3-electron" class="headerlink" title="3.electron"></a>3.electron</h1><p>electron使用也就知道它是一个做桌面应用的框架，现在使用github开源的“想学吗“这个写文章的桌面应用写股市的日记和读书心得，可以用，给它一个赞！</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">electron-packager . firsteletron --win --out ../firsteleApp --arch=x64 --version=0.0.1 --electron-version=1.4.13//打包</div><div class="line">//桌面最大化</div><div class="line">const &#123;app, globalShortcut, BrowserWindow&#125; = require(&apos;electron&apos;)</div><div class="line"></div><div class="line">let mainWindow;</div><div class="line">app.on(&apos;ready&apos;, () =&gt; &#123;</div><div class="line">    mainWindow = new BrowserWindow(&#123;width: 800, height: 600&#125;)</div><div class="line">    mainWindow.setFullScreen(true);</div><div class="line">    globalShortcut.register(&apos;ESC&apos;, () =&gt; &#123;</div><div class="line">        mainWindow.setFullScreen(false);</div><div class="line">    &#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p><a href="http://blog.csdn.net/j_bleach/article/details/78513282//" target="_blank" rel="external">http://blog.csdn.net/j_bleach/article/details/78513282//</a> vue项目生成桌面应用</p>
-<h1 id="4-vue"><a href="#4-vue" class="headerlink" title="4.vue"></a>4.vue</h1><p>vue用了快两年了，真的容易上手文档易懂，学习成本不高，这样和其他程序员没有差距（别人也容易会），能够使用这个框架的技术含金量不大。</p>
+<h1 id="4-vue"><a href="#4-vue" class="headerlink" title="4.vue"></a>4.vue</h1><p>vue用了快两年了，真的容易上手文档易懂，学习成本不高，这样和其他程序员没有差距（别人也容易会），能够使用这个框架的技术含金量不大，面试问的也是百度得到的model的实现原理。</p>
 <p><a href="https://blog.csdn.net/qq_37026273/article/details/80192962//vue-cli" target="_blank" rel="external">https://blog.csdn.net/qq_37026273/article/details/80192962//vue-cli</a> npm run build打包图片路径问题</p>
 <p><a href="https://www.cnblogs.com/zlbrother/p/7823380.html" target="_blank" rel="external">https://www.cnblogs.com/zlbrother/p/7823380.html</a>  //vue-cli自适应布局</p>
 <p><a href="https://blog.csdn.net/hjh15827475896/article/details/78207066" target="_blank" rel="external">https://blog.csdn.net/hjh15827475896/article/details/78207066</a>  //vue插件</p>
@@ -330,6 +333,68 @@
 <p><a href="http://www.cnblogs.com/zyulike/p/10209562.html" target="_blank" rel="external">http://www.cnblogs.com/zyulike/p/10209562.html</a>  // vue||egg-socket.io</p>
 <p><strong>vue-router路由技巧</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;route-link :to=&quot;&#123;name:&apos;music&apos;,query:&#123;id=6&#125;&#125;&quot;&gt;&lt;/route-link&gt;//vue路由标签跳转</div><div class="line">//router.js</div><div class="line">嵌套路由：&#123;</div><div class="line">name:music,</div><div class="line">path:&apos;/music&apos;,</div><div class="line">component:Music,</div><div class="line">children:[</div><div class="line">&#123;name:&apos;music_oumei&apos;,path:&apos;oumei&apos;,component:Oumei&#125;,//  /oumei是绝对路径,把/music替换/oumei才切换路由，oumei是相对路径，输入/music/oumei切换路由</div><div class="line">&#123;name:&apos;music_guochan&apos;,path:&apos;guochan&apos;,component:Guochan&#125;,</div><div class="line">	]</div><div class="line">&#125;</div><div class="line">music组件里加</div><div class="line">&lt;route-link :to=&quot;&#123;name:&apos;music_oumei&apos;&#125;&quot;&gt;欧美音乐&lt;/route-link&gt;</div><div class="line">&lt;route-link :to=&quot;&#123;name:&apos;music_guochan&apos;&#125;&quot;&gt;国产音乐&lt;/route-link&gt;</div><div class="line">&lt;router-view&gt;&lt;/router-view&gt;</div></pre></td></tr></table></figure>
+<p><a href="https://www.cnblogs.com/XHappyness/p/7919610.html" target="_blank" rel="external">https://www.cnblogs.com/XHappyness/p/7919610.html</a>    //vue使用axios时在IE浏览器promise错误 ：1. 　npm install babel-polyfill –save　　2. 　在main.ts中 import “babel-polyfill”</p>
+<p><a href="https://blog.csdn.net/qq_36911154/article/details/78152538" target="_blank" rel="external">https://blog.csdn.net/qq_36911154/article/details/78152538</a>  //响应式布局</p>
+<p><a href="https://webgradients.com/" target="_blank" rel="external">https://webgradients.com/</a>   //渐变色</p>
+<h1 id="5-think-js"><a href="#5-think-js" class="headerlink" title="5.think.js"></a>5.think.js</h1><p><a href="http://www.uedsc.com/322603.html" target="_blank" rel="external">http://www.uedsc.com/322603.html</a>   //thinkjs<br><a href="https://www.jianshu.com/p/7481d35a1dd6" target="_blank" rel="external">https://www.jianshu.com/p/7481d35a1dd6</a>  //thinkjs的一些方法</p>
+<p><strong>cmswing（相关脚手架）</strong></p>
+<p><a href="https://newsn.net/say/cmswing-install.html" target="_blank" rel="external">https://newsn.net/say/cmswing-install.html</a>  //cmswing安装</p>
+<h1 id="6-CSS"><a href="#6-CSS" class="headerlink" title="6.CSS"></a>6.CSS</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.nav::after&#123;content:&apos;&apos;;display:block;clear:both;&#125;  //清除浮动流</div><div class="line">p&#123;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;&#125;  //单行文字溢出</div><div class="line">p&#123;width:300px;height:30px;line-height:15;overflow:hidden;&#125;  //多行文字溢出</div><div class="line">方案1&#123;text-indent:200px;white-space:nowrap;overflow-hidden;&#125;  方案2&#123;width:190px;height:0px;padding-top:90px;overflow:hidden;bgi:url(...);bgsize:190px 90px;/&#125;   //css因网速慢而不加载样式情况操作  p标签不能套块标签 a标签不能套a标签</div><div class="line">height: calc(100vh - 100px);  //css3元素等于屏幕高度</div></pre></td></tr></table></figure>
+<h1 id="7-react"><a href="#7-react" class="headerlink" title="7.react"></a>7.react</h1><p>react在动脑学院的高级前端课程学了一课程，还需要项目练，以后会更好！</p>
+<p><a href="https://segmentfault.com/a/1190000012921279" target="_blank" rel="external">https://segmentfault.com/a/1190000012921279</a>  //react入门  import * as xxx from xxx  //对没有export 的xxx文件 以as别名xxx使用</p>
+<h1 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ps -ef|grep node   //查看node进程 node可改为你相查的进程</div><div class="line">netstat -anp|grep 80  //查看使用80端口的进程，80改为你想查的端口都行</div><div class="line">如果想结束掉express再启动，则 使用kill 0000（进程号pid）命令把进程杀掉</div><div class="line"> kill XXX  有 node app.js 的一行数字</div></pre></td></tr></table></figure>
+<p><strong>niginx</strong></p>
+<p><a href="https://blog.csdn.net/yougoule/article/details/78186138" target="_blank" rel="external">https://blog.csdn.net/yougoule/article/details/78186138</a>    //nginx<br><a href="https://www.cnblogs.com/Miss-mickey/p/6734831.html" target="_blank" rel="external">https://www.cnblogs.com/Miss-mickey/p/6734831.html</a>  //反向代理配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd /usr/local/nginx/sbin   执行./nginx -s reload</div></pre></td></tr></table></figure>
+<p><strong>AB压力测试</strong></p>
+<p><a href="https://blog.csdn.net/qq_26525215/article/details/79182674" target="_blank" rel="external">https://blog.csdn.net/qq_26525215/article/details/79182674</a>  //AB测试<br>ab -n 100 -c 10 -v 4 -p postdata.txt -T application/x-www-form-urlencoded “<a href="http://47.254.42.191:8080/admin/booklist" target="_blank" rel="external">http://47.254.42.191:8080/admin/booklist</a>“<br>ab -n 100 -c 10 -p postdata.txt <a href="http://mianmianshi.com:8088/index.html" target="_blank" rel="external">http://mianmianshi.com:8088/index.html</a>   请求100  并发10<br><a href="https://blog.csdn.net/u010889390/article/details/50561293" target="_blank" rel="external">https://blog.csdn.net/u010889390/article/details/50561293</a></p>
+<p><a href="https://www.cnblogs.com/apolloren/p/8832868.html" target="_blank" rel="external">https://www.cnblogs.com/apolloren/p/8832868.html</a>    //phpstudy  linux安装</p>
+<p><strong>宝塔</strong></p>
+<p>宝塔是个很好用的软件集合（专业名称一下忘了！#.#），非常省事，对于linux服务器操作nginx，阿帕奇，数据库，拍黄片，上传文件统统能搞定！！！</p>
+<p><a href="http://www.bt.cn/btcode.html" target="_blank" rel="external">http://www.bt.cn/btcode.html</a>  //宝塔安装</p>
+<p><strong>redis</strong></p>
+<p><a href="https://blog.csdn.net/u012343297/article/details/78839063" target="_blank" rel="external">https://blog.csdn.net/u012343297/article/details/78839063</a>  //windows安装Redis<br><a href="https://www.cnblogs.com/limit1/p/9045183.html" target="_blank" rel="external">https://www.cnblogs.com/limit1/p/9045183.html</a>      //linux安装Redis</p>
+<p><strong>vpn</strong></p>
+<p><a href="https://github.com/allenking1028/ss/issues/1" target="_blank" rel="external">https://github.com/allenking1028/ss/issues/1</a>   //服务器翻墙</p>
+<p>下面连接是要翻墙看，临时可以用蓝灯免费的！！！</p>
+<p><a href="https://youtu.be/xrbviAfagrU" target="_blank" rel="external">https://youtu.be/xrbviAfagrU</a> ///视频教程  </p>
+<p>测速度（100以内）：  ipip.net 工具&gt;traceRoute</p>
+<p><strong>一些命令</strong></p>
+<p>systemctl restart nginx.service<br>systemctl status httpd.service<br>systemctl start mongod.service<br>查看mongo安装位置 whereis mongod<br>查看修改配置文件 ： vim /etc/mongod.conf<br>3.启动MongoDB<br>启动mongodb ：systemctl start mongod.service<br>停止mongodb ：systemctl stop mongod.service</p>
+<h1 id="C"><a href="#C" class="headerlink" title="C"></a>C</h1><p><strong>sqlite</strong></p>
+<p><a href="https://blog.csdn.net/weixin_41656968/article/details/80338626" target="_blank" rel="external">https://blog.csdn.net/weixin_41656968/article/details/80338626</a>  //sqlite<br><a href="https://blog.csdn.net/a03910/article/details/82856194" target="_blank" rel="external">https://blog.csdn.net/a03910/article/details/82856194</a> //链接sqlite数据库<br><a href="https://www.cnblogs.com/gates/p/3936974.html" target="_blank" rel="external">https://www.cnblogs.com/gates/p/3936974.html</a>  //数据库语句</p>
+<p><strong>杂项</strong></p>
+<p><a href="https://blog.csdn.net/xjc_gx/article/details/38228959" target="_blank" rel="external">https://blog.csdn.net/xjc_gx/article/details/38228959</a>   //读卡</p>
+<p><a href="http://www.win7zhijia.cn/jiaocheng/win7_14019.html" target="_blank" rel="external">http://www.win7zhijia.cn/jiaocheng/win7_14019.html</a>   //win7直接进桌面<br><a href="https://blog.csdn.net/zhouyingge1104/article/details/74853193" target="_blank" rel="external">https://blog.csdn.net/zhouyingge1104/article/details/74853193</a>  //开机自启</p>
+<p><a href="https://www.cnblogs.com/e-cat/p/9474646.html" target="_blank" rel="external">https://www.cnblogs.com/e-cat/p/9474646.html</a>  //语音</p>
+<h1 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h1><p><strong>正则</strong></p>
+<p><a href="http://www.cnblogs.com/xinwusuo/p/5948908.html" target="_blank" rel="external">http://www.cnblogs.com/xinwusuo/p/5948908.html</a>  //正则</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">let reg = /^.*4.*$/;  //数字选出有4的正则</div></pre></td></tr></table></figure>
+<p><strong>node.js</strong></p>
+<p>npm install font-spider -g  //安装根据网页的文字生成对应 的字体</p>
+<p><strong>three.js</strong></p>
+<p>three.js是网页渲染3D图形的框架，webgl现在好多人用，学习遇到问题加这个群585582495多问，虽然答案会沉没在吹水的文字里，但问了总比没问好~</p>
+<p><a href="https://www.cnblogs.com/zhnblog/archive/2017/07/12/7153781.html" target="_blank" rel="external">https://www.cnblogs.com/zhnblog/archive/2017/07/12/7153781.html</a> //three</p>
+<p><a href="https://www.jianshu.com/p/906072e60197" target="_blank" rel="external">https://www.jianshu.com/p/906072e60197</a>    //加载模型</p>
+<p><strong>egg.js</strong></p>
+<p>egg.js是阿里的基于koa的插件齐全并且很受欢迎的node框架，要学就先学这个！</p>
+<p><a href="http://www.cnblogs.com/zyulike/p/10209562.html" target="_blank" rel="external">http://www.cnblogs.com/zyulike/p/10209562.html</a>  // vue||egg-socket.io</p>
+<p><strong>杂项</strong></p>
+<p>bitbug.net  //ico生成网站</p>
+<p>–disable-web-security –user-data-dir  //本地运行解决跨域</p>
+<p><a href="https://blog.csdn.net/wfg18801733667/article/details/52159830" target="_blank" rel="external">https://blog.csdn.net/wfg18801733667/article/details/52159830</a>  //优化网页加载速度</p>
+<p><a href="https://www.cnblogs.com/lml2017/p/9953429.html" target="_blank" rel="external">https://www.cnblogs.com/lml2017/p/9953429.html</a>  //flexible  px =&gt; rem</p>
+<p><a href="https://segmentfault.com/a/1190000011145364" target="_blank" rel="external">https://segmentfault.com/a/1190000011145364</a>  //跨域</p>
+<h1 id="PHP"><a href="#PHP" class="headerlink" title="PHP"></a>PHP</h1><p>php是因为有个项目是有关*企秀的源码，后台是php写的，项目维护需要接触了一些</p>
+<p><a href="https://newsn.net/say/centos-php72-yum.html" target="_blank" rel="external">https://newsn.net/say/centos-php72-yum.html</a>    //安装php</p>
+<h1 id="微信开发"><a href="#微信开发" class="headerlink" title="微信开发"></a>微信开发</h1><p>微信开发就跟着文档做就ok了，孰能生巧这是真理，刚开始不懂很正常解决方案就是多看！！！</p>
+<p><a href="https://segmentfault.com/a/1190000011540768" target="_blank" rel="external">https://segmentfault.com/a/1190000011540768</a>   //微信支付1</p>
+<p><a href="https://segmentfault.com/a/1190000011556584" target="_blank" rel="external">https://segmentfault.com/a/1190000011556584</a>  //微信支付2<br><a href="https://blog.csdn.net/wclimb/article/details/79327988" target="_blank" rel="external">https://blog.csdn.net/wclimb/article/details/79327988</a>  //node.js微信支付</p>
+<p><a href="https://www.cnblogs.com/deng-cc/p/7183239.html" target="_blank" rel="external">https://www.cnblogs.com/deng-cc/p/7183239.html</a> //微信支付方法</p>
+<p><a href="https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=9_1" target="_blank" rel="external">https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=9_1</a>  //微信小程序支付<br><a href="https://www.jianshu.com/p/72f5c1e3f8a5" target="_blank" rel="external">https://www.jianshu.com/p/72f5c1e3f8a5</a>  //小程序支付</p>
+<h1 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h1><p><strong>现在使用的是很瘦欢饮的博客框架hexo</strong></p>
+<p><a href="https://blog.csdn.net/wh211212/article/details/75004199" target="_blank" rel="external">https://blog.csdn.net/wh211212/article/details/75004199</a>  //GitHub博客教程<br><a href="https://www.bilibili.com/video/av12931967" target="_blank" rel="external">https://www.bilibili.com/video/av12931967</a>  //个人博客hexo视频教程</p>
+<p><a href="https://liuliansp.github.io/" target="_blank" rel="external">https://liuliansp.github.io/</a>   //刘麟的博客（搞爬虫）</p>
 
           
         
@@ -407,7 +472,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posté le</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-02T21:38:43+08:00">
                 2019-06-02
@@ -545,7 +610,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posté le</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-02T21:25:54+08:00">
                 2019-06-02
@@ -749,7 +814,7 @@
                 <a href="/archives/">
               
                   <span class="site-state-item-count">3</span>
-                  <span class="site-state-item-name">Artikel</span>
+                  <span class="site-state-item-name">articles</span>
                 </a>
               </div>
             
@@ -799,7 +864,7 @@
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
@@ -807,7 +872,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+  <div class="theme-info">Thème &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
 
 
 
